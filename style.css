@@ -94,6 +94,15 @@ span {
     color: rgb(23, 194, 137);
 }
 
+span2 {
+    font-weight: 600;
+    color: rgb(0, 0, 32);
+}
+
+hr {
+    background-color: rgb(0, 0, 32);
+}
+
 .home .text-3 span {
     animation: blink 1s infinite;
     color: rgb(23, 194, 137);
@@ -290,7 +299,7 @@ section .title::after {
 
 .about .about-content .fade-in {
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.9s ease-in;
 }
 
 .about .about-content .fade-in.appear {
@@ -361,7 +370,7 @@ footer {
 .projects .projects-content .left img {
     height: 360px;
     width: 400px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 0 20px black;
     position: relative;
@@ -380,7 +389,7 @@ footer {
     display: inline-block;
     color: rgb(0, 0, 32);
     margin-top: 20px;
-    margin-left: 80%;
+    margin-right: 2%;
     font-size: 19px;
     font-weight: 600;
     padding: 4px 4px;
@@ -398,6 +407,12 @@ footer {
     background: rgb(0, 0, 32);
 }
 
+.projects .projects-content .right .text{
+    color: rgb(0, 0, 32);
+    font-weight: 600;
+    font-size: 20px;
+}
+
 .projects .projects-content:nth-child(odd) {
     flex-direction: row-reverse;
 }
@@ -409,7 +424,8 @@ footer {
 
 .projects .projects-content .right {
     flex: 1;
-    margin-left: -100px;
+    margin-left: 50px;
+    line-height: 25px;
     background: rgb(21, 167, 118);
     padding: 10px 20px;
     border-radius: 12px;
@@ -420,7 +436,7 @@ footer {
 
 .projects .projects-content .left,
 .projects .projects-content .right {
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+    transition: opacity 0.9s ease-in, transform 0.9s ease-in;
     opacity: 0;
 }
 
@@ -431,7 +447,7 @@ footer {
 }
 
 .projects .projects-content:nth-child(odd) .left {
-    margin-left: -100px;
+    margin-left: 50px;
 }
 
 .projects .projects-content:nth-child(odd) .right {
@@ -661,8 +677,8 @@ footer span a:hover {
     }
 
     .home .in {
-        width: 80%;
-        font-size: 15px;
+        width: 100%;
+        font-size: 13px;
     }
 
     .home .home-content {
@@ -775,9 +791,6 @@ footer span a:hover {
 }
 
 @media (max-width: 433px) {
-    .projects .projects-content .right a {
-        margin-left: 75%;
-    }
     section .title::after {
         padding: 2px;
     }

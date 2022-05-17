@@ -53,7 +53,7 @@ typed();
 
 
 
-const textArray = ["HTML.", "CSS.", "ANGULAR.", "JAVASCRIPT.", "TYPESCRIPT.", "BOOTSTRAP."];
+const textArray = ["HTML.", "CSS.", "ANGULAR.", "NODE.JS.", "JAVASCRIPT.", "TYPESCRIPT.", "BOOTSTRAP.", "JSON.", "FIREBASE.",];
 const typingDelay = 100;
 const erasingDelay = 100;
 const newTextDelay = 1000;
@@ -116,3 +116,19 @@ faders.forEach(fader => {
 sliders.forEach(slider => {
     appearOnScroll.observe(slider);
 });
+
+function sendEmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "osuigwepaul.o@gmail.com",
+        Password : "Hustle001",
+        To : 'osuigwepaul.o@gmail.com',
+        From : document.getElementById("email").value,
+        Subject :  document.getElementById("subject").value,
+        Body : "Name: " + document.getElementById("name").value +
+                "<br> Email: " + document.getElementById("email").value +
+                "<br> Message: " + document.getElementById("message").value
+    }).then(
+        message => alert("Message Sent Successfully")
+    );
+}
