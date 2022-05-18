@@ -5,7 +5,8 @@ const scrollup = document.querySelector('.scroll-up-btn');
 const html = document.querySelector('.home');
 const typedText = document.querySelector('.typed-text');
 const sliders = document.querySelectorAll('.column');
-const faders = document.querySelectorAll(".fade-in")
+const faders = document.querySelectorAll(".fade-in");
+const links = document.querySelectorAll('.menu a')
 
 
 
@@ -32,6 +33,19 @@ menubtn.addEventListener("click",() => {
 
     menu.classList.toggle("active");
 });
+
+links.forEach((link) => {
+    link.addEventListener("click",() =>{
+        if(menubtn.firstElementChild.classList.contains("fa-times")){
+            menubtn.firstElementChild.classList.replace("fa-times", "fa-bars");
+        }else{
+            menubtn.firstElementChild.classList.replace("fa-bars", "fa-times");
+        }
+
+        menu.classList.remove("active");
+    });
+});
+
 
 scrollup.addEventListener("click", () =>{
     document.body.scrollTop = 0;
