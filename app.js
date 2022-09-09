@@ -67,7 +67,7 @@ typed();
 
 
 
-const textArray = ["HTML.", "CSS.", "ANGULAR.", "JAVASCRIPT.", "TYPESCRIPT.", "BOOTSTRAP.", "JSON.", "FIREBASE.", ];
+const textArray = ["HTML.", "CSS.", "SASS.", "ANGULAR.", "JAVASCRIPT.", "TYPESCRIPT.", "BOOTSTRAP.", "JSON.", "FIREBASE.", ];
 const typingDelay = 100;
 const erasingDelay = 100;
 const newTextDelay = 1000;
